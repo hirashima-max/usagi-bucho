@@ -10,6 +10,16 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#1f2a3a">
 <link rel="icon" type="image/webp" href="avatar.webp">
+<script>
+  // ---- Form backend settings (see worker/README.md) ----
+  // Leave FORM_ENDPOINT empty to fall back to FormSubmit until the Worker is deployed.
+  const SITE_CONFIG = {
+    FORM_ENDPOINT: "",
+    TURNSTILE_SITEKEY: "",
+    GIFT_URL: "gift/reading-list/"
+  };
+</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -212,6 +222,17 @@
   .cform .fstatus.err{color:var(--accent)}
   @media(max-width:860px){.cform{padding:22px}}
 
+  /* gift / newsletter */
+  .gift{background:var(--bg-2)}
+  .gift .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,6vw,72px);align-items:start}
+  .gift-list{margin:18px 0;display:grid;gap:8px;font-size:14.5px;color:var(--ink-2)}
+  .gift-list li{padding-left:18px;position:relative}
+  .gift-list li::before{content:"";position:absolute;left:0;top:12px;width:8px;height:2px;background:var(--accent)}
+  .gift-note{font-size:13.5px;color:var(--muted)}
+  .nform h3{margin-bottom:4px}
+  .turnstile:empty{display:none}
+  @media(max-width:860px){.gift .wrap{grid-template-columns:1fr}}
+
   footer{padding:36px 0;font-size:13px;color:var(--muted)}
   footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   footer .credits{flex-basis:100%;order:3;font-size:12px}
@@ -236,6 +257,7 @@
       <li><a href="#services">サービス</a></li>
       <li><a href="#voices">お客様の声</a></li>
       <li><a href="#articles">記事</a></li>
+      <li><a href="#gift">読書リスト</a></li>
       <li><a href="#contact">相談する</a></li>
     </ul>
     <a class="btn primary cta" href="https://note.com/cerebro1977" target="_blank" rel="noopener">noteで読む</a>
@@ -488,6 +510,36 @@
   </div>
 </section>
 
+<section class="gift" id="gift">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Free gift ・ メルマガ登録特典</span>
+      <h2>キャリアの判断に効いた18冊の読書リスト</h2>
+      <p>Audibleと紙で実際に読み切った本の中から、評価のされ方・判断の土台・コンディション・視野の4章で18冊を選びました。1冊ごとに「外資のキャリアでどう効いたか」を書いています。日本語版があるものは日本語版へリンクしています。</p>
+      <ul class="gift-list">
+        <li>具体と抽象 ／ アイデアのちから ／ 異文化理解力 など、評価の設計に効く5冊</li>
+        <li>ブラック・スワン ／ 不運のすすめ ／ 易経入門 など、判断の土台になる6冊</li>
+        <li>小説を含む、視野を広げる7冊</li>
+      </ul>
+      <p class="gift-note">メルマガは不定期（月2〜4通）。外資の年収と評価の仕組みを、売り込みなしで書きます。解除はいつでもできます。</p>
+    </div>
+    <form class="cform nform reveal" id="nform" data-form="newsletter" novalidate>
+      <h3>登録して読書リストを受け取る</h3>
+      <label>お名前<span class="req">必須</span><input type="text" name="name" required autocomplete="name" placeholder="ニックネームでも構いません"></label>
+      <label>メールアドレス<span class="req">必須</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+      <input type="hidden" name="form" value="newsletter">
+      <input type="hidden" name="_subject" value="【うさぎ部長サイト】メルマガ登録">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <div class="turnstile"></div>
+      <button class="btn primary" type="submit">登録して読書リストを開く</button>
+      <p class="fnote">登録直後に読書リストのページが開きます。メールアドレスは配信以外に使いません。</p>
+      <p class="fstatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="reveal">
@@ -501,7 +553,7 @@
       </ol>
       <p class="alt-contact">XのDMでも受け付けています： <a href="https://x.com/usagi_bucho" target="_blank" rel="noopener">@usagi_bucho</a></p>
     </div>
-    <form class="cform reveal" id="cform" action="https://formsubmit.co/ajax/capocerebro@gmail.com" method="POST" novalidate>
+    <form class="cform reveal" id="cform" data-form="contact" novalidate>
       <label>お名前<span class="req">必須</span><input type="text" name="name" required autocomplete="name" placeholder="ニックネームでも構いません"></label>
       <label>メールアドレス<span class="req">必須</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
       <label>ご希望
@@ -517,6 +569,8 @@
       <input type="hidden" name="_subject" value="【うさぎ部長サイト】新しい相談">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="form" value="contact">
+      <div class="turnstile"></div>
       <button class="btn primary" type="submit">送信する</button>
       <p class="fnote">送信後、通常2〜3日以内にメールで返信します。内容は第三者に共有しません。</p>
       <p class="fstatus" role="status" aria-live="polite"></p>
@@ -540,21 +594,45 @@
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  const form=document.getElementById('cform');
-  if(form){
+  // ---- Forms: Cloudflare Worker (Turnstile + Resend) with FormSubmit fallback ----
+  const FORMSUBMIT='https://formsubmit.co/ajax/capocerebro@gmail.com';
+  const useWorker=!!SITE_CONFIG.FORM_ENDPOINT;
+  const forms=[...document.querySelectorAll('form[data-form]')];
+  const widgets=new Map();
+  window.onloadTurnstile=()=>{};
+  function mountTurnstile(){
+    if(!useWorker||!SITE_CONFIG.TURNSTILE_SITEKEY||!window.turnstile)return;
+    forms.forEach(f=>{const slot=f.querySelector('.turnstile');if(slot&&!widgets.has(f)){widgets.set(f,turnstile.render(slot,{sitekey:SITE_CONFIG.TURNSTILE_SITEKEY,theme:'auto',language:'ja'}))}});
+  }
+  if(useWorker&&SITE_CONFIG.TURNSTILE_SITEKEY){const t=setInterval(()=>{if(window.turnstile){mountTurnstile();clearInterval(t)}},200)}
+  forms.forEach(form=>{
     const status=form.querySelector('.fstatus');
+    const kind=form.dataset.form;
     form.addEventListener('submit',async(e)=>{
       e.preventDefault();
       if(!form.checkValidity()){form.reportValidity();return}
+      const fd=new FormData(form);
+      if(useWorker&&SITE_CONFIG.TURNSTILE_SITEKEY&&!fd.get('cf-turnstile-response')){status.className='fstatus err';status.textContent='スパム対策の確認が終わるまで少しお待ちください。';return}
       const btn=form.querySelector('button');btn.disabled=true;status.className='fstatus';status.textContent='送信しています…';
       try{
-        const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
-        if(r.ok){form.reset();status.className='fstatus ok';status.textContent='送信しました。数日以内にメールで返信します。'}
-        else{throw new Error('bad')}
-      }catch(_){status.className='fstatus err';status.innerHTML='送信できませんでした。お手数ですが <a href="https://x.com/usagi_bucho" target="_blank" rel="noopener">XのDM</a> からご連絡ください。'}
+        const r=await fetch(useWorker?SITE_CONFIG.FORM_ENDPOINT:FORMSUBMIT,{method:'POST',body:fd,headers:{'Accept':'application/json'}});
+        const data=await r.json().catch(()=>({}));
+        if(!r.ok||(useWorker&&!data.ok))throw new Error(data.error||'bad');
+        form.reset();
+        if(kind==='newsletter'){
+          const url=(useWorker&&data.url)||SITE_CONFIG.GIFT_URL;
+          status.className='fstatus ok';status.innerHTML='登録ありがとうございます。読書リストを開いています… <a href="'+url+'">開かない場合はこちら</a>';
+          setTimeout(()=>{location.href=url},800);
+        }else{
+          status.className='fstatus ok';status.textContent='送信しました。数日以内にメールで返信します。';
+        }
+      }catch(_){
+        status.className='fstatus err';status.innerHTML='送信できませんでした。お手数ですが <a href="https://x.com/usagi_bucho" target="_blank" rel="noopener">XのDM</a> からご連絡ください。';
+      }
+      if(widgets.has(form)&&window.turnstile)turnstile.reset(widgets.get(form));
       btn.disabled=false;
     });
-  }
+  });
   setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')),1500);
 </script>
 </body>
