@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>うさぎ部長｜外資の年収と評価の仕組み</title>
+<meta name="description" content="外資の年収は、才能より先に業種とロールと担当地域で決まります。インド系SIerから米系テック企業へ13年、シンガポール駐在を経て現在JAPACのグループマネージャー。オファーを出す側から見た年収と評価の仕組みをもとに、ミドルキャリアのキャリア戦略を支援します。">
+<meta property="og:title" content="うさぎ部長｜外資の年収と評価の仕組み">
+<meta property="og:description" content="オファーを出す側から見た、年収と評価の仕組み。外資13年・昇進5回の一次証言をもとにしたキャリア戦略。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f7f4ee">
+<link rel="icon" type="image/webp" href="avatar.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+
+  :root{
+    --bg:#f7f4ee;
+    --bg-2:#efeae0;
+    --surface:#fffdf9;
+    --ink:#1f2a3a;
+    --ink-2:#4a5567;
+    --muted:#8a92a0;
+    --line:#dcd5c8;
+    --accent:#b5543c;
+    --accent-ink:#ffffff;
+    --accent-soft:#f3e2db;
+    --shadow:0 1px 2px rgba(31,42,58,.05),0 12px 32px -16px rgba(31,42,58,.18);
+    --serif:"Shippori Mincho","Noto Serif JP","Hiragino Mincho ProN",serif;
+    --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans",-apple-system,sans-serif;
+    --radius:14px;
+    --max:1080px;
+    --gutter:clamp(16px,4vw,40px);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#15191f;--bg-2:#1b2027;--surface:#1e242c;--ink:#ecebe6;--ink-2:#b6bcc6;--muted:#7d8591;
+      --line:#2d343e;--accent:#d9775e;--accent-ink:#15191f;--accent-soft:#3a2a25;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px -16px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#15191f;--bg-2:#1b2027;--surface:#1e242c;--ink:#ecebe6;--ink-2:#b6bcc6;--muted:#7d8591;
+    --line:#2d343e;--accent:#d9775e;--accent-ink:#15191f;--accent-soft:#3a2a25;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px -16px rgba(0,0,0,.6);
+  }
+
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9;letter-spacing:.01em;font-feature-settings:"palt"}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.45;letter-spacing:.02em}
+  h2{font-size:clamp(24px,3.2vw,34px)}
+  h3{font-size:19px}
+  p{color:var(--ink-2)}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;margin-bottom:14px}
+  .lead{font-size:17px;max-width:38em}
+  section{padding:clamp(64px,9vw,112px) 0}
+  .sec-head{margin-bottom:clamp(32px,5vw,56px)}
+  .sec-head p{margin-top:14px;max-width:40em}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:18px}
+  .brand img{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:top}
+  .nav ul{display:flex;gap:26px;font-size:14px;font-weight:500}
+  .nav ul a{color:var(--ink-2)}
+  .nav ul a:hover{color:var(--ink)}
+  .nav .cta{font-size:14px}
+  @media(max-width:760px){.nav ul{display:none}}
+
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px;border:1.5px solid var(--ink);color:var(--ink);transition:transform .15s,background .15s,color .15s;line-height:1.3}
+  .btn:hover{transform:translateY(-1px)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .btn.primary:hover{filter:brightness(1.05)}
+  .btn.ghost:hover{background:var(--ink);color:var(--bg)}
+  .btn svg{width:16px;height:16px}
+
+  /* hero */
+  .hero{padding:clamp(72px,11vw,140px) 0 clamp(56px,8vw,96px);position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr);gap:clamp(32px,6vw,80px);align-items:center}
+  .hero h1{font-size:clamp(30px,4.6vw,52px);font-weight:600;line-height:1.4}
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero h1 span{display:inline-block}
+  h1,h2,h3,blockquote{font-feature-settings:normal;text-indent:0}
+  .hero .lead{margin-top:24px}
+  .hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+  .hero-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+  .hero-card .who{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+  .avatar{width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:top;flex:none;border:2px solid var(--line)}
+  .who strong{display:block;font-family:var(--serif);font-size:18px}
+  .who span{font-size:13px;color:var(--muted)}
+  .hero-card p{font-size:14.5px}
+  .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+  .fact{background:var(--bg-2);border-radius:12px;padding:14px 16px}
+  .fact b{display:block;font-family:var(--serif);font-size:24px;color:var(--ink);line-height:1.2}
+  .fact small{font-size:12px;color:var(--muted)}
+  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+
+  /* quote band */
+  .band{background:var(--ink);color:var(--bg);padding:clamp(48px,6vw,72px) 0}
+  .band .wrap{display:grid;grid-template-columns:1fr;gap:12px}
+  .band blockquote{font-family:var(--serif);font-size:clamp(20px,2.6vw,28px);line-height:1.7;max-width:30em}
+  .band p{color:color-mix(in srgb,var(--bg) 70%,transparent);font-size:14px;max-width:42em}
+
+  /* about */
+  .about .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px)}
+  .about .sec-head{margin-bottom:0}
+  .about p+p{margin-top:16px}
+  .timeline{margin-top:28px;border-left:2px solid var(--line);padding-left:22px;display:grid;gap:18px}
+  .timeline li{position:relative;font-size:15px}
+  .timeline li::before{content:"";position:absolute;left:-28px;top:12px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+  .timeline b{display:block;color:var(--ink);font-weight:700}
+  .timeline span{color:var(--ink-2)}
+  @media(max-width:860px){.about .wrap{grid-template-columns:1fr}}
+
+  /* method grid */
+  .alt{background:var(--bg-2)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+  .card .num{font-family:var(--serif);font-size:13px;color:var(--accent);letter-spacing:.1em;margin-bottom:10px;display:block}
+  .card h3{margin-bottom:10px}
+  .card p{font-size:14.5px}
+
+  /* services */
+  .svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .svc .card{display:flex;flex-direction:column}
+  .svc .tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin-bottom:14px}
+  .svc .price{font-family:var(--serif);font-size:22px;margin:14px 0 6px;color:var(--ink)}
+  .svc .price small{font-family:var(--sans);font-size:13px;color:var(--muted);margin-left:6px}
+  .svc ul{margin:12px 0 20px;display:grid;gap:8px;font-size:14.5px;color:var(--ink-2)}
+  .svc ul li{padding-left:18px;position:relative}
+  .svc ul li::before{content:"";position:absolute;left:0;top:12px;width:8px;height:2px;background:var(--accent)}
+  .svc .card .btn{margin-top:auto;align-self:flex-start}
+  .svc .featured{border-color:var(--accent);background:linear-gradient(180deg,var(--accent-soft) 0%,var(--surface) 40%)}
+  .note-small{margin-top:20px;font-size:13px;color:var(--muted)}
+
+  /* testimonials */
+  .tstats{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:14px;font-size:14px;color:var(--ink-2)}
+  .tstats b{color:var(--ink);font-family:var(--serif);font-size:18px;margin-right:4px}
+  .tstats .stars{color:#d9a441;letter-spacing:.05em}
+  .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .tcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow)}
+  .tcard .stars{color:#d9a441;font-size:14px;letter-spacing:.05em}
+  .tcard blockquote{font-size:14.5px;line-height:1.85;color:var(--ink-2);position:relative;padding-left:16px;border-left:2px solid var(--accent)}
+  .tcard footer{padding:0;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--muted);margin-top:auto}
+  .tcard footer b{color:var(--ink);font-weight:500}
+  .tsrc{margin-top:22px;font-size:13px;color:var(--muted)}
+  .tsrc a{color:var(--accent);font-weight:700}
+
+  /* articles */
+  .articles{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .art{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px;transition:transform .15s,box-shadow .15s}
+  .art:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .art .kind{font-size:12px;color:var(--muted);letter-spacing:.08em}
+  .art h3{font-size:17px;line-height:1.55}
+  .art p{font-size:14px}
+  .art .more{margin-top:auto;font-size:13px;font-weight:700;color:var(--accent)}
+
+  /* channels */
+  .channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+  .ch{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;transition:border-color .15s}
+  .ch:hover{border-color:var(--accent)}
+  .ch .ic{width:40px;height:40px;border-radius:10px;background:var(--bg-2);display:grid;place-items:center;flex:none}
+  .ch .ic svg{width:20px;height:20px}
+  .ch b{display:block;font-size:15px}
+  .ch span{font-size:13px;color:var(--muted)}
+
+  /* contact */
+  .contact{background:var(--ink);color:var(--bg)}
+  .contact .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(32px,6vw,80px);align-items:center}
+  .contact h2{color:var(--bg)}
+  .contact p{color:color-mix(in srgb,var(--bg) 75%,transparent)}
+  .contact .eyebrow{color:var(--accent)}
+  .contact .btn{border-color:var(--bg);color:var(--bg)}
+  .contact .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .contact .btn.ghost:hover{background:var(--bg);color:var(--ink)}
+  .contact .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .contact ol{display:grid;gap:14px;counter-reset:s}
+  .contact ol li{display:flex;gap:14px;align-items:flex-start;font-size:14.5px;color:color-mix(in srgb,var(--bg) 85%,transparent)}
+  .contact ol li::before{counter-increment:s;content:counter(s);width:28px;height:28px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-family:var(--serif);font-size:13px;flex:none}
+  @media(max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+
+  footer{padding:36px 0;font-size:13px;color:var(--muted)}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+  footer a:hover{color:var(--ink)}
+
+  html.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  html.js .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="うさぎ部長">
+      <img src="avatar.webp" alt="" width="32" height="32">
+      うさぎ部長
+    </a>
+    <ul>
+      <li><a href="#about">プロフィール</a></li>
+      <li><a href="#method">考え方</a></li>
+      <li><a href="#services">サービス</a></li>
+      <li><a href="#voices">お客様の声</a></li>
+      <li><a href="#articles">記事</a></li>
+      <li><a href="#contact">相談する</a></li>
+    </ul>
+    <a class="btn primary cta" href="https://note.com/cerebro1977" target="_blank" rel="noopener">noteで読む</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Career strategy for mid-career professionals</span>
+      <h1><span>外資の年収は、</span><span>才能より先に</span><br><span><em>業種とロールと担当地域</em></span><span>で決まります。</span></h1>
+      <p class="lead">インド系SIerから米系テック企業へ13年。シンガポール駐在を経て、現在はJAPACのグループマネージャーとして、オファーを出す側の席に座っています。そこから見えた年収と評価の仕組みを、毎朝1本書いています。</p>
+      <div class="actions">
+        <a class="btn primary" href="#services">サービスを見る</a>
+        <a class="btn ghost" href="https://x.com/usagi_bucho" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.1 8.1L23.2 22h-6.6l-5.1-6.7L5.6 22H2.5l7.6-8.7L1.8 2h6.7l4.6 6.1L18.9 2zm-1.1 18h1.8L7.3 3.9H5.4L17.8 20z"/></svg>
+          Xで毎朝読む
+        </a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="プロフィール概要">
+      <div class="who">
+        <img class="avatar" src="avatar.webp" alt="うさぎ部長のアバター">
+        <div><strong>うさぎ部長</strong><span>@usagi_bucho ・ 外資の年収と評価の仕組み</span></div>
+      </div>
+      <p>評価する側に座って分かったことを、売り込みではなく一次証言として書きます。読者の多くは35〜54歳、外資に在籍しているか、外資を視野に入れている会社員の方です。</p>
+      <div class="facts">
+        <div class="fact"><b>13年</b><small>米系テック企業に在籍</small></div>
+        <div class="fact"><b>5回</b><small>昇進（評価される側として）</small></div>
+        <div class="fact"><b>約7年</b><small>シンガポール駐在</small></div>
+        <div class="fact"><b>毎朝1本</b><small>Xで年収と評価の話</small></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <blockquote>渇きは作りません。すでにある渇きを、一次データで可視化するだけです。</blockquote>
+    <p>「外資に行けば年収は上がるのか」「AIに仕事を奪われないか」。煽るのではなく、何が起きていて、なぜそうなるのかを無料で全部出します。自分の場合はどう動くか、その手順と型だけを有料でまとめています。</p>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Profile</span>
+      <h2>オファーを出す側から見た、キャリアの実務</h2>
+    </div>
+    <div class="reveal">
+      <p>新卒で入った会社は6週間で倒産しました。2社目は2年半で倒産。3社目は朝9時から終電までが常態で、年収は450万円以下。その後インド系SIerで週60〜70時間働く8年半を経て、LinkedIn経由の声がけをきっかけに米系テック企業へ移りました。</p>
+      <p>入社から13年で5回昇進し、シンガポールに約7年駐在。今は複数の国にまたがるチームを率い、部下・上司・関連部門・顧客の8割が海外の人です。採用面接では候補者を評価し、年次評価では部下の昇進を推す側に座っています。</p>
+      <p>キャリアの成果は、評価のされ方を設計し、それを支える心身のコンディションを作り、日々の小さな決断を複利で積むことで出る。これが、評価する側とされる側の両方を経験して辿り着いた結論です。</p>
+      <ul class="timeline">
+        <li><b>倒産2社・ブラック1社</b><span>キャリアの最初の7年。「頑張れば報われる」が通じない場所を知る</span></li>
+        <li><b>インド系SIer 8.5年</b><span>日米の大規模導入・研修を担当。グローバル環境での仕事の型を身につける</span></li>
+        <li><b>米系テック企業 13年・昇進5回</b><span>コンサルタントからグループマネージャーへ。評価される側から、評価する側へ</span></li>
+        <li><b>シンガポール駐在 約7年</b><span>JAPAC全域の分散チームを統括。2025年に東京へ帰任</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="method">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Method</span>
+      <h2>評価は、才能ではなく設計で決まる</h2>
+      <p>精神論ではなく、マーケティングの道具をキャリアに持ち込みます。自分の職場で実際に使い、昇進と組織の成果につなげた4つの型です。</p>
+    </div>
+    <div class="grid">
+      <article class="card reveal">
+        <span class="num">01</span>
+        <h3>社内3C分析</h3>
+        <p>上司・同僚・自分をそれぞれSWOTで棚卸しし、「誰も埋めていない穴」を見つけます。私自身はこの分析から、増員ゼロでチームの対応件数を30%以上増やす打ち手に辿り着きました。</p>
+      </article>
+      <article class="card reveal">
+        <span class="num">02</span>
+        <h3>錯覚資産</h3>
+        <p>実力と評価は別の変数です。評価する側がどの情報をもとに判断しているかを知り、見られ方を意図的に設計します。実力を偽るのではなく、正しく届ける技術です。</p>
+      </article>
+      <article class="card reveal">
+        <span class="num">03</span>
+        <h3>120%ニーズとポジショニング</h3>
+        <p>上司が「言葉にしていないが、本当は欲しいもの」を120%満たす位置を取ります。全方位で頑張るのをやめ、評価が集中する一点に力を寄せます。</p>
+      </article>
+      <article class="card reveal">
+        <span class="num">04</span>
+        <h3>習慣とコンディションの設計</h3>
+        <p>戦略は、それを実行できる体と頭があって初めて機能します。卒酒、栄養、小さな決断の複利。土台を整えることも、キャリア戦略の一部として扱います。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Services</span>
+      <h2>まず地図を読み、必要なら伴走します</h2>
+      <p>入口は980円の記事です。そこで自分の現在地が分かった方にだけ、個別の支援を案内しています。</p>
+    </div>
+    <div class="svc">
+      <article class="card featured reveal">
+        <span class="tag">まずはここから</span>
+        <h3>有料note「外資キャリアの地図」</h3>
+        <p>SNSでは「何が起きているか・なぜか」を無料で出し、記事では「自分の場合はどうするか」を手順・テンプレート・チェックリストで体系化しています。</p>
+        <div class="price">¥980<small>／1本・買い切り</small></div>
+        <ul>
+          <li>『外資年収の教科書 2026』</li>
+          <li>『あなたのいない部屋で、昇進の鍵を握る人たちが聞く二つの質問』</li>
+          <li>マガジン「うさぎ部長のマネジメント実話」は無料で読めます</li>
+        </ul>
+        <a class="btn primary" href="https://note.com/cerebro1977" target="_blank" rel="noopener">noteで読む</a>
+      </article>
+      <article class="card reveal">
+        <span class="tag">個別</span>
+        <h3>キャリア戦略コーチング</h3>
+        <p>社内3C分析をあなたの職場に当てはめ、次の評価サイクルで何を・誰に・どう見せるかを一緒に決めます。転職の是非も、残る前提で設計します。</p>
+        <div class="price">個別見積<small>／オンライン・少人数</small></div>
+        <ul>
+          <li>コーチング認定資格を持つ現役マネージャーが担当</li>
+          <li>年収交渉・昇進・海外駐在・外資転職の判断</li>
+          <li>社内でのコミュニケーション設計</li>
+        </ul>
+        <a class="btn ghost" href="#contact">相談する</a>
+      </article>
+      <article class="card reveal">
+        <span class="tag">1日集中</span>
+        <h3>1Dayコンサル</h3>
+        <p>1日で、上司に向けた3分のエレベーターピッチを完成させます。「なぜ自分が評価されないのか」を分析で終わらせず、次の1on1で使える言葉にまで落とします。</p>
+        <div class="price">個別見積<small>／成果物つき</small></div>
+        <ul>
+          <li>成果物：上司への3分プレゼン原稿</li>
+          <li>社内3C分析テンプレート付き</li>
+          <li>事前準備は不要。今迷っていることだけ持ってきてください</li>
+        </ul>
+        <a class="btn ghost" href="#contact">相談する</a>
+      </article>
+    </div>
+    <p class="note-small">※ 本業を続けながら個人として提供しているため、お受けできる人数に限りがあります。「必ず昇進」「必ず内定」のような約束はしません。</p>
+  </div>
+</section>
+
+<section class="alt" id="voices">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Voices</span>
+      <h2>受講された方の声</h2>
+      <p>ココナラで提供してきたキャリアコーチング・自己分析・コミュニケーション講座のレビューから、そのまま抜粋しています。</p>
+      <div class="tstats"><span><b>11</b>件の販売実績</span><span><span class="stars">★★★★★</span> <b>4.6</b>平均評価</span></div>
+    </div>
+    <div class="tgrid">
+      <article class="tcard reveal">
+        <span class="stars" aria-label="5つ星">★★★★★</span>
+        <blockquote>外資系の会社でマネージャー職を務めている方で、経験豊富で話も上手ですし、常に優しく接してくださり、ご自身のエピソードを交えながら、色んな視点でアドバイスをしてくれます。セッションが全て完了すると最後にマインドマップを提供してくれるので、あとからいくらでも見返すことができます。</blockquote>
+        <footer><b>キャリアコーチング（3回）</b><span>ココナラ</span></footer>
+      </article>
+      <article class="tcard reveal">
+        <span class="stars" aria-label="5つ星">★★★★★</span>
+        <blockquote>今まで他人軸で生きていたこともあり、しんどい・生き甲斐がわからないと思うことが多かったのですが、こちらのセッションを通じて「自分が大切にしていること／気持ち」がわかることができました。最近した大きな決断もその指標に沿っていたので自信がつきました。</blockquote>
+        <footer><b>キャリアコーチング（3回）</b><span>ココナラ</span></footer>
+      </article>
+      <article class="tcard reveal">
+        <span class="stars" aria-label="5つ星">★★★★★</span>
+        <blockquote>IT業界営業職での転職について相談させていただきました。業界知識が豊富でSaaS／SIerの違いやそれぞれのメリットデメリットをわかりやすく解説していただけました。</blockquote>
+        <footer><b>出世のための自己分析サポート</b><span>ココナラ</span></footer>
+      </article>
+      <article class="tcard reveal">
+        <span class="stars" aria-label="5つ星">★★★★★</span>
+        <blockquote>知りたかったプレゼンで相手を動かすスキルを体系的にわかりやすく教えていただけました。特に、相手を理解した上でコミュニケーションを進めていくノウハウについて、知識だけでなく実践の方法まで教えていただけました。</blockquote>
+        <footer><b>コミュニケーション講座</b><span>ココナラ</span></footer>
+      </article>
+      <article class="tcard reveal">
+        <span class="stars" aria-label="5つ星">★★★★★</span>
+        <blockquote>自分の知らない個性を明確に知ることができました。今後の人生の選択の場面での判断軸になります。また、副業のアドバイスもいただいたため実践してみたいと思います。</blockquote>
+        <footer><b>キャリアコーチング（3回）</b><span>ココナラ</span></footer>
+      </article>
+      <article class="tcard reveal">
+        <span class="stars" aria-label="5つ星">★★★★★</span>
+        <blockquote>こちらがお送りした情報をもとに事前に資料のご準備をいただき、とてもスムーズにコーチングを受けることができました。自分をさらけ出すテーマだったので少し恥ずかしかったのですが、温厚にお話しいただき、安心して受けられました。</blockquote>
+        <footer><b>出世のための自己分析サポート</b><span>ココナラ</span></footer>
+      </article>
+    </div>
+    <p class="tsrc">すべてのレビューは <a href="https://coconala.com/services/3270152" target="_blank" rel="noopener">ココナラのプロフィール</a> で確認できます。</p>
+  </div>
+</section>
+
+<section id="articles">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Writing</span>
+      <h2>読まれている記事</h2>
+      <p>すべてnoteで無料公開しています。</p>
+    </div>
+    <div class="articles">
+      <a class="art reveal" href="https://note.com/cerebro1977" target="_blank" rel="noopener">
+        <span class="kind">年収</span>
+        <h3>外資に行けば年収は上がるのか</h3>
+        <p>「外資＝高年収」の前に、業種・ロール・担当地域の3つで決まる構造を一次データで分解します。</p>
+        <span class="more">noteで読む →</span>
+      </a>
+      <a class="art reveal" href="https://note.com/cerebro1977" target="_blank" rel="noopener">
+        <span class="kind">マネジメント実話</span>
+        <h3>エースの暴言は、仕組みの悲鳴だった</h3>
+        <p>個人の性格の問題に見えたものが、実は組織の設計の問題だった話。</p>
+        <span class="more">noteで読む →</span>
+      </a>
+      <a class="art reveal" href="https://note.com/cerebro1977" target="_blank" rel="noopener">
+        <span class="kind">マネジメント実話</span>
+        <h3>「営業は楽をしている」と言った部下に</h3>
+        <p>部門をまたいだ不満にマネージャーとしてどう向き合ったか。実際のやり取りから。</p>
+        <span class="more">noteで読む →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="channels">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Channels</span>
+      <h2>発信している場所</h2>
+    </div>
+    <div class="channels">
+      <a class="ch reveal" href="https://x.com/usagi_bucho" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.1 8.1L23.2 22h-6.6l-5.1-6.7L5.6 22H2.5l7.6-8.7L1.8 2h6.7l4.6 6.1L18.9 2zm-1.1 18h1.8L7.3 3.9H5.4L17.8 20z"/></svg></span>
+        <span><b>X @usagi_bucho</b><span>毎朝7時、年収と評価の話を1本</span></span>
+      </a>
+      <a class="ch reveal" href="https://www.threads.net/@usagibucho" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3C7 3 4 6.5 4 12s3 9 8 9c4.2 0 7-2.4 7-5.6 0-3-2.3-4.6-5.2-4.6-2.6 0-4.3 1.4-4.3 3.3 0 1.6 1.3 2.7 3 2.7 2.2 0 3.3-1.6 3.4-4.5.1-2.4-.9-5-3.9-5-1.8 0-3 .9-3.6 2"/></svg></span>
+        <span><b>Threads @usagibucho</b><span>毎晩、同じテーマの短い版</span></span>
+      </a>
+      <a class="ch reveal" href="https://note.com/cerebro1977" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v6h6M9 13h7M9 17h7"/></svg></span>
+        <span><b>note</b><span>週次まとめと有料記事</span></span>
+      </a>
+      <a class="ch reveal" href="https://www.instagram.com/usagibucho" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+        <span><b>Instagram @usagibucho</b><span>記事公開のお知らせ</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>整理してから、ではなく、整理のために相談してください</h2>
+      <p>「頭の中を整理してから」と考えて、そのまま数ヶ月動けなくなる方が多くいます。整理そのものが仕事なので、まとまっていない状態で構いません。</p>
+      <div class="actions">
+        <a class="btn primary" href="https://x.com/usagi_bucho" target="_blank" rel="noopener">XのDMで相談する</a>
+        <a class="btn ghost" href="https://note.com/cerebro1977" target="_blank" rel="noopener">まず記事を読む</a>
+      </div>
+    </div>
+    <ol class="reveal">
+      <li>XのDMで「相談希望」と、今迷っていることを一言送ってください</li>
+      <li>日程を調整し、オンラインで30分お話しします（この時点で費用は発生しません）</li>
+      <li>合いそうであれば、コーチングか1Dayコンサルをご案内します。合わなければそのまま終わります</li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> うさぎ部長</span>
+    <span><a href="https://x.com/usagi_bucho" target="_blank" rel="noopener">X</a> ・ <a href="https://www.threads.net/@usagibucho" target="_blank" rel="noopener">Threads</a> ・ <a href="https://note.com/cerebro1977" target="_blank" rel="noopener">note</a> ・ <a href="https://www.instagram.com/usagibucho" target="_blank" rel="noopener">Instagram</a></span>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+  document.getElementById('y').textContent=new Date().getFullYear();
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')),1500);
+</script>
+</body>
+</html>
