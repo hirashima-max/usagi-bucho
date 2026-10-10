@@ -128,6 +128,15 @@
   .band blockquote{font-family:var(--serif);font-size:clamp(20px,2.6vw,28px);line-height:1.7;max-width:30em}
   .band p{color:color-mix(in srgb,var(--bg) 70%,transparent);font-size:14px;max-width:42em}
 
+  /* needs */
+  .needs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .need{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow)}
+  .need .surface{font-size:13.5px;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line);text-decoration-thickness:1.5px}
+  .need .real{font-family:var(--serif);font-size:16.5px;line-height:1.7;color:var(--ink)}
+  .need .answer{font-size:13.5px;color:var(--accent);font-weight:700;margin-top:auto;padding-top:6px}
+  .card .fw{font-size:12.5px;color:var(--muted);margin:-6px 0 10px;letter-spacing:.04em}
+  .svc .outcome{font-family:var(--serif);font-size:16px;color:var(--ink);margin-bottom:8px;line-height:1.6}
+
   /* about */
   .about .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px)}
   .about .sec-head{margin-bottom:0}
@@ -257,6 +266,7 @@
       うさぎ部長
     </a>
     <ul>
+      <li><a href="#needs">本音</a></li>
       <li><a href="#about">プロフィール</a></li>
       <li><a href="#method">考え方</a></li>
       <li><a href="#services">サービス</a></li>
@@ -308,12 +318,54 @@
 
 <div class="band">
   <div class="wrap">
-    <blockquote>渇きは作りません。すでにある渇きを、一次データで可視化するだけです。</blockquote>
-    <p>「外資に行けば年収は上がるのか」「AIに仕事を奪われないか」。煽るのではなく、何が起きていて、なぜそうなるのかを無料で全部出します。自分の場合はどう動くか、その手順と型だけを有料でまとめています。</p>
+    <blockquote>来年の評価面談で、上司が先にあなたの名前を出す。そのために今年やることを、採点する側の視点で決めます。</blockquote>
+    <p>転職エージェントは「辞める」前提でしか動けません。ここでは「辞めずに勝つ」も「売れる形で出る」も、両方を同じ机に置いて決めます。何が起きていて、なぜそうなるのかは無料で全部出します。あなたの場合はどう動くか、その手順と型だけが有料です。</p>
   </div>
 </div>
 
-<section class="about" id="about">
+<section id="needs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Is this for you?</span>
+      <h2>口には出さないが、本当はこう思っていませんか</h2>
+      <p>相談に来る方が最初に言うことと、30分話したあとに出てくる本音は違います。左が最初の言葉、右が本音です。右に心当たりがあれば、ここは役に立ちます。</p>
+    </div>
+    <div class="needs">
+      <article class="need reveal">
+        <p class="surface">「昇進する方法を知りたい」</p>
+        <p class="real">なぜ自分より実力のない人が先に上がるのか。上司が口にしない評価基準を知って、効かない努力をやめたい。</p>
+        <p class="answer">→ 社内3C分析で、その基準を割り出します</p>
+      </article>
+      <article class="need reveal">
+        <p class="surface">「上司とのコミュニケーションを改善したい」</p>
+        <p class="real">次の1on1で、昇給か昇進の確約を引き出したい。そのための台本が欲しい。</p>
+        <p class="answer">→ 1Dayコンサルで、3分の原稿を持ち帰ります</p>
+      </article>
+      <article class="need reveal">
+        <p class="surface">「外資転職のアドバイスが欲しい」</p>
+        <p class="real">本当に今の会社から抜け出せる実力があるのか、採用する側の人間に判定してほしい。</p>
+        <p class="answer">→ オファーを出す側の現役が、忖度なしで答えます</p>
+      </article>
+      <article class="need reveal">
+        <p class="surface">「職務経歴書を見てほしい」</p>
+        <p class="real">日系SIerでの泥臭い経験を、外資の採用側が探している「業種とロール」の言葉に翻訳してほしい。</p>
+        <p class="answer">→ 錯覚資産の再設計。私自身がインド系SIerから移った翻訳です</p>
+      </article>
+      <article class="need reveal">
+        <p class="surface">「今の年収は適正か」</p>
+        <p class="real">交渉の武器が欲しい。あるいは、残っても遅れていないと言える根拠が欲しい。</p>
+        <p class="answer">→ 一次データで、動く理由か残る理由のどちらかを確定します</p>
+      </article>
+      <article class="need reveal">
+        <p class="surface">「外資で生き残る方法を知りたい」</p>
+        <p class="real">次の組織改編やレイオフで、自分の名前がリストに載らない位置に先に移っておきたい。</p>
+        <p class="answer">→ 上司が本当に困っていることを120%満たす位置を取ります</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about alt" id="about">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Profile</span>
@@ -334,32 +386,36 @@
   </div>
 </section>
 
-<section class="alt" id="method">
+<section id="method">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Method</span>
       <h2>評価は、才能ではなく設計で決まる</h2>
-      <p>精神論ではなく、マーケティングの道具をキャリアに持ち込みます。自分の職場で実際に使い、昇進と組織の成果につなげた4つの型です。</p>
+      <p>精神論ではなく、マーケティングの道具をキャリアに持ち込みます。自分の職場で実際に使い、昇進と組織の成果につなげた4つの型です。見出しは「何ができるようになるか」、その下が型の名前です。</p>
     </div>
     <div class="grid">
       <article class="card reveal">
         <span class="num">01</span>
-        <h3>社内3C分析</h3>
+        <h3>上司が本当に見ている基準を割り出す</h3>
+        <p class="fw">社内3C分析</p>
         <p>上司・同僚・自分をそれぞれSWOTで棚卸しし、「誰も埋めていない穴」を見つけます。私自身はこの分析から、<strong>増員ゼロでチームの対応件数を30%以上増やす打ち手</strong>に辿り着きました。</p>
       </article>
       <article class="card reveal">
         <span class="num">02</span>
-        <h3>錯覚資産</h3>
+        <h3>実力を、評価者に届く形に変える</h3>
+        <p class="fw">錯覚資産</p>
         <p>実力と評価は別の変数です。評価する側がどの情報をもとに判断しているかを知り、見られ方を意図的に設計します。実力を偽るのではなく、正しく届ける技術です。</p>
       </article>
       <article class="card reveal">
         <span class="num">03</span>
-        <h3>120%ニーズとポジショニング</h3>
+        <h3>上司が口にしない課題を、先に満たす</h3>
+        <p class="fw">120%ニーズとポジショニング</p>
         <p>上司が「言葉にしていないが、本当は欲しいもの」を120%満たす位置を取ります。全方位で頑張るのをやめ、評価が集中する一点に力を寄せます。</p>
       </article>
       <article class="card reveal">
         <span class="num">04</span>
-        <h3>習慣とコンディションの設計</h3>
+        <h3>来年も高い出力で働ける体を保つ</h3>
+        <p class="fw">習慣とコンディションの設計</p>
         <p>戦略は、それを実行できる体と頭があって初めて機能します。卒酒、栄養、小さな決断の複利。土台を整えることも、キャリア戦略の一部として扱います。</p>
       </article>
     </div>
@@ -381,6 +437,7 @@
       <article class="card featured reveal">
         <span class="tag">まずはここから</span>
         <h3>有料note「外資キャリアの地図」</h3>
+        <p class="outcome">エージェントに会う前に、外資のルールを自分で読めるようになる。</p>
         <p>SNSでは「何が起きているか・なぜか」を無料で出し、記事では「自分の場合はどうするか」を手順・テンプレート・チェックリストで体系化しています。</p>
         <div class="price">¥980<small>／1本・買い切り</small></div>
         <ul>
@@ -393,6 +450,7 @@
       <article class="card reveal">
         <span class="tag">個別</span>
         <h3>キャリア戦略コーチング</h3>
+        <p class="outcome">辞めずに勝つか、売れる形で出るか。どちらかを決めて帰る。</p>
         <p>転職を急ぐ前に、まずは<strong>今の職場で勝つためのポジショニング</strong>を設計します。「実力はあるのに昇進できない」外資系の中堅層や、「外資の評価軸に経歴を翻訳したい」日系SIer・大手企業の方へ。次の評価サイクルで何を・誰に・どう見せるかを一緒に決めます。</p>
         <div class="price">個別見積<small>／目安は初回ヒアリング後にご提示・オンライン</small></div>
         <ul>
@@ -405,6 +463,7 @@
       <article class="card reveal">
         <span class="tag">1日集中</span>
         <h3>1Dayコンサル</h3>
+        <p class="outcome">次の1on1の台本を、その日のうちに持ち帰る。</p>
         <p>評価者に刺さる<strong>「3分のエレベーターピッチ」を1日で完成</strong>させます。「なぜ自分が評価されないのか」をモヤモヤした悩みのまま終わらせず、次の1on1で直属の上司を動かすための具体的な言葉と論理にまで落とし込みます。</p>
         <div class="price">個別見積<small>／目安は初回ヒアリング後にご提示・成果物つき</small></div>
         <ul>
@@ -415,7 +474,7 @@
         <a class="btn ghost" href="#contact">相談する</a>
       </article>
     </div>
-    <p class="note-small">※ 本業を続けながら個人として提供しているため、お受けできる人数に限りがあります。「必ず昇進」「必ず内定」のような約束はしません。</p>
+    <p class="note-small">※ 本業を続けながら個人として提供しているため、お受けできる人数に限りがあります。「必ず昇進」「必ず内定」のような約束はしません。<br>※ 向いていない方：求人の紹介が欲しい方（求人は扱いません）、今すぐ辞める以外の選択肢を考えたくない方。</p>
   </div>
 </section>
 
@@ -559,7 +618,7 @@
       <ol>
         <li>下のフォームから、今迷っていることを一言送ってください</li>
         <li>日程を調整し、オンラインで30分お話しします（<strong>この初回相談は完全無料です</strong>）</li>
-        <li>現状をヒアリングし、伴走が有効な方にのみコーチング等をご案内します。<strong>無理な勧誘は一切ありません</strong></li>
+        <li>現状をヒアリングし、<strong>このままで頭打ちになるかどうかを忖度なしでお伝えします</strong>。伴走が有効な方にのみコーチング等をご案内します。<strong>無理な勧誘は一切ありません</strong></li>
       </ol>
       <p class="privacy"><strong>プライバシー保護について</strong><br>外資系・日系企業での社内政治や評価に関わるご相談を扱うため、お預かりした個人情報およびご相談内容の秘密は厳守します。現職での身バレを気にせず、安心してご相談ください。</p>
       <p class="alt-contact">XのDMでも受け付けています： <a href="https://x.com/usagi_bucho" target="_blank" rel="noopener">@usagi_bucho</a></p>
