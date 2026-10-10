@@ -147,6 +147,9 @@
   .card h3{margin-bottom:10px}
   .card p{font-size:14.5px}
 
+  .midcta{margin-top:36px;text-align:center}
+  .midcta p{margin-bottom:14px;font-family:var(--serif);font-size:18px;color:var(--ink)}
+
   /* services */
   .svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
   .svc .card{display:flex;flex-direction:column}
@@ -206,7 +209,9 @@
   .contact ol li::before{counter-increment:s;content:counter(s);width:28px;height:28px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-family:var(--serif);font-size:13px;flex:none}
   @media(max-width:860px){.contact .wrap{grid-template-columns:1fr}}
 
-  .contact .alt-contact{margin-top:22px;font-size:14px}
+  .contact .privacy{margin-top:22px;font-size:13.5px;padding:14px 16px;border:1px solid color-mix(in srgb,var(--bg) 25%,transparent);border-radius:12px;color:color-mix(in srgb,var(--bg) 85%,transparent)}
+  .contact .privacy strong{color:var(--bg)}
+  .contact .alt-contact{margin-top:18px;font-size:14px}
   .contact .alt-contact a{color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:3px}
   .cform{background:var(--surface);color:var(--ink);border-radius:20px;padding:28px;display:grid;gap:16px;box-shadow:var(--shadow)}
   .cform label{display:grid;gap:6px;font-size:13.5px;font-weight:700;color:var(--ink)}
@@ -223,7 +228,7 @@
   @media(max-width:860px){.cform{padding:22px}}
 
   /* gift / newsletter */
-  .gift{background:var(--bg-2)}
+  .gift{background:var(--bg)}
   .gift .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,6vw,72px);align-items:start}
   .gift-list{margin:18px 0;display:grid;gap:8px;font-size:14.5px;color:var(--ink-2)}
   .gift-list li{padding-left:18px;position:relative}
@@ -276,7 +281,7 @@
     <div>
       <span class="eyebrow">Career strategy for mid-career professionals</span>
       <h1><span>外資の年収は、</span><span>才能より先に</span><br><span><em>業種とロールと担当地域</em></span><span>で決まります。</span></h1>
-      <p class="lead">インド系SIerから米系テック企業へ13年。シンガポール駐在を経て、現在はJAPACのグループマネージャーとして、オファーを出す側の席に座っています。そこから見えた年収と評価の仕組みを、毎朝1本書いています。</p>
+      <p class="lead">インド系SIerでの過酷な8年半から、米系テック企業へ移り13年。シンガポール駐在を経て、現在はJAPACのグループマネージャーとして、<strong>「誰を昇進させ、誰にオファーを出すか」を決める席</strong>に座っています。転職エージェントは「受かる会社」を提示しますが、私は評価する側の一次情報をもとに、「あなたが現職でどう勝つか」から逆算するキャリアの型を毎朝書いています。</p>
       <div class="actions">
         <a class="btn primary" href="#services">サービスを見る</a>
         <a class="btn ghost" href="https://x.com/usagi_bucho" target="_blank" rel="noopener">
@@ -316,7 +321,8 @@
     </div>
     <div class="reveal">
       <p>新卒で入った会社は6週間で倒産しました。2社目は2年半で倒産。3社目は朝9時から終電までが常態で、年収は450万円以下。その後インド系SIerで週60〜70時間働く8年半を経て、LinkedIn経由の声がけをきっかけに米系テック企業へ移りました。</p>
-      <p>入社から13年で5回昇進し、シンガポールに約7年駐在。今は複数の国にまたがるチームを率い、部下・上司・関連部門・顧客の8割が海外の人です。採用面接では候補者を評価し、年次評価では部下の昇進を推す側に座っています。</p>
+      <p>入社から13年で5回昇進し、シンガポールに約7年駐在。今は複数の国にまたがるチームを率い、部下・上司・関連部門・顧客の8割が海外の人です。</p>
+      <p><strong>採用面接では候補者を評価し、年次評価では部下の昇進を推す側</strong>に座っています。</p>
       <p>キャリアの成果は、評価のされ方を設計し、それを支える心身のコンディションを作り、日々の小さな決断を複利で積むことで出る。これが、評価する側とされる側の両方を経験して辿り着いた結論です。</p>
       <ul class="timeline">
         <li><b>倒産2社・ブラック1社</b><span>キャリアの最初の7年。「頑張れば報われる」が通じない場所を知る</span></li>
@@ -339,7 +345,7 @@
       <article class="card reveal">
         <span class="num">01</span>
         <h3>社内3C分析</h3>
-        <p>上司・同僚・自分をそれぞれSWOTで棚卸しし、「誰も埋めていない穴」を見つけます。私自身はこの分析から、増員ゼロでチームの対応件数を30%以上増やす打ち手に辿り着きました。</p>
+        <p>上司・同僚・自分をそれぞれSWOTで棚卸しし、「誰も埋めていない穴」を見つけます。私自身はこの分析から、<strong>増員ゼロでチームの対応件数を30%以上増やす打ち手</strong>に辿り着きました。</p>
       </article>
       <article class="card reveal">
         <span class="num">02</span>
@@ -356,6 +362,10 @@
         <h3>習慣とコンディションの設計</h3>
         <p>戦略は、それを実行できる体と頭があって初めて機能します。卒酒、栄養、小さな決断の複利。土台を整えることも、キャリア戦略の一部として扱います。</p>
       </article>
+    </div>
+    <div class="midcta reveal">
+      <p>この4つの型を、あなたの職場に当てはめるとどうなるか。</p>
+      <a class="btn primary" href="#contact">あなたの現状を整理する無料相談（30分）</a>
     </div>
   </div>
 </section>
@@ -383,24 +393,24 @@
       <article class="card reveal">
         <span class="tag">個別</span>
         <h3>キャリア戦略コーチング</h3>
-        <p>社内3C分析をあなたの職場に当てはめ、次の評価サイクルで何を・誰に・どう見せるかを一緒に決めます。転職の是非も、残る前提で設計します。</p>
-        <div class="price">個別見積<small>／オンライン・少人数</small></div>
+        <p>転職を急ぐ前に、まずは<strong>今の職場で勝つためのポジショニング</strong>を設計します。「実力はあるのに昇進できない」外資系の中堅層や、「外資の評価軸に経歴を翻訳したい」日系SIer・大手企業の方へ。次の評価サイクルで何を・誰に・どう見せるかを一緒に決めます。</p>
+        <div class="price">個別見積<small>／目安は初回ヒアリング後にご提示・オンライン</small></div>
         <ul>
-          <li>コーチング認定資格を持つ現役マネージャーが担当</li>
-          <li>年収交渉・昇進・海外駐在・外資転職の判断</li>
-          <li>社内でのコミュニケーション設計</li>
+          <li>現役JAPACマネージャーの視点で「錯覚資産」と「120%ニーズ」を設計</li>
+          <li>現職での年収交渉・昇進・海外駐在・外資転職の判断</li>
+          <li>社内政治の乗りこなし方とコミュニケーション設計</li>
         </ul>
         <a class="btn ghost" href="#contact">相談する</a>
       </article>
       <article class="card reveal">
         <span class="tag">1日集中</span>
         <h3>1Dayコンサル</h3>
-        <p>1日で、上司に向けた3分のエレベーターピッチを完成させます。「なぜ自分が評価されないのか」を分析で終わらせず、次の1on1で使える言葉にまで落とします。</p>
-        <div class="price">個別見積<small>／成果物つき</small></div>
+        <p>評価者に刺さる<strong>「3分のエレベーターピッチ」を1日で完成</strong>させます。「なぜ自分が評価されないのか」をモヤモヤした悩みのまま終わらせず、次の1on1で直属の上司を動かすための具体的な言葉と論理にまで落とし込みます。</p>
+        <div class="price">個別見積<small>／目安は初回ヒアリング後にご提示・成果物つき</small></div>
         <ul>
-          <li>成果物：上司への3分プレゼン原稿</li>
-          <li>社内3C分析テンプレート付き</li>
-          <li>事前準備は不要。今迷っていることだけ持ってきてください</li>
+          <li>成果物：上司への3分プレゼン原稿 ＋ 社内3C分析</li>
+          <li>外資の年次評価・プロモーション交渉の直前対策に最適</li>
+          <li>事前準備は不要。頭の中が散らかったまま来てください</li>
         </ul>
         <a class="btn ghost" href="#contact">相談する</a>
       </article>
@@ -450,6 +460,36 @@
       </article>
     </div>
     <p class="tsrc">すべてのレビューは <a href="https://coconala.com/services/3270152" target="_blank" rel="noopener">ココナラのプロフィール</a> で確認できます。</p>
+  </div>
+</section>
+
+<section class="gift" id="gift">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Free gift ・ メルマガ登録特典</span>
+      <h2>キャリアの判断に効いた18冊の読書リスト</h2>
+      <p>Audibleと紙で実際に読み切った本の中から、評価のされ方・判断の土台・コンディション・視野の4章で18冊を選びました。1冊ごとに「外資のキャリアでどう効いたか」を書いています。日本語版があるものは日本語版へリンクしています。</p>
+      <ul class="gift-list">
+        <li>具体と抽象 ／ アイデアのちから ／ 異文化理解力 など、評価の設計に効く5冊</li>
+        <li>ブラック・スワン ／ 不運のすすめ ／ 易経入門 など、判断の土台になる6冊</li>
+        <li>小説を含む、視野を広げる7冊</li>
+      </ul>
+      <p class="gift-note">メルマガは不定期（月2〜4通）。外資の年収と評価の仕組みを、売り込みなしで書きます。解除はいつでもできます。</p>
+    </div>
+    <form class="cform nform reveal" id="nform" data-form="newsletter" novalidate>
+      <h3>登録して読書リストを受け取る</h3>
+      <label>お名前<span class="req">必須</span><input type="text" name="name" required autocomplete="name" placeholder="ニックネームでも構いません"></label>
+      <label>メールアドレス<span class="req">必須</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+      <input type="hidden" name="form" value="newsletter">
+      <input type="hidden" name="_subject" value="【うさぎ部長サイト】メルマガ登録">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <div class="turnstile"></div>
+      <button class="btn primary" type="submit">登録して読書リストを開く</button>
+      <p class="fnote">登録直後に読書リストのページが開きます。メールアドレスは配信以外に使いません。</p>
+      <p class="fstatus" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
 
@@ -510,47 +550,18 @@
   </div>
 </section>
 
-<section class="gift" id="gift">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Free gift ・ メルマガ登録特典</span>
-      <h2>キャリアの判断に効いた18冊の読書リスト</h2>
-      <p>Audibleと紙で実際に読み切った本の中から、評価のされ方・判断の土台・コンディション・視野の4章で18冊を選びました。1冊ごとに「外資のキャリアでどう効いたか」を書いています。日本語版があるものは日本語版へリンクしています。</p>
-      <ul class="gift-list">
-        <li>具体と抽象 ／ アイデアのちから ／ 異文化理解力 など、評価の設計に効く5冊</li>
-        <li>ブラック・スワン ／ 不運のすすめ ／ 易経入門 など、判断の土台になる6冊</li>
-        <li>小説を含む、視野を広げる7冊</li>
-      </ul>
-      <p class="gift-note">メルマガは不定期（月2〜4通）。外資の年収と評価の仕組みを、売り込みなしで書きます。解除はいつでもできます。</p>
-    </div>
-    <form class="cform nform reveal" id="nform" data-form="newsletter" novalidate>
-      <h3>登録して読書リストを受け取る</h3>
-      <label>お名前<span class="req">必須</span><input type="text" name="name" required autocomplete="name" placeholder="ニックネームでも構いません"></label>
-      <label>メールアドレス<span class="req">必須</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
-      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-      <input type="hidden" name="form" value="newsletter">
-      <input type="hidden" name="_subject" value="【うさぎ部長サイト】メルマガ登録">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <div class="turnstile"></div>
-      <button class="btn primary" type="submit">登録して読書リストを開く</button>
-      <p class="fnote">登録直後に読書リストのページが開きます。メールアドレスは配信以外に使いません。</p>
-      <p class="fstatus" role="status" aria-live="polite"></p>
-    </form>
-  </div>
-</section>
-
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Contact</span>
       <h2>整理してから、ではなく、整理のために相談してください</h2>
-      <p>「頭の中を整理してから」と考えて、そのまま数ヶ月動けなくなる方が多くいます。整理そのものが仕事なので、まとまっていない状態で構いません。</p>
+      <p>「頭の中を整理してから」と考えて、数ヶ月動けなくなる方が多くいます。整理そのものが私の仕事なので、転職エージェントには言えない社内の生々しい話や、「そもそも転職すべきか分からない」というまとまっていない状態のままで構いません。</p>
       <ol>
         <li>下のフォームから、今迷っていることを一言送ってください</li>
-        <li>日程を調整し、オンラインで30分お話しします（この時点で費用は発生しません）</li>
-        <li>合いそうであれば、コーチングか1Dayコンサルをご案内します。合わなければそのまま終わります</li>
+        <li>日程を調整し、オンラインで30分お話しします（<strong>この初回相談は完全無料です</strong>）</li>
+        <li>現状をヒアリングし、伴走が有効な方にのみコーチング等をご案内します。<strong>無理な勧誘は一切ありません</strong></li>
       </ol>
+      <p class="privacy"><strong>プライバシー保護について</strong><br>外資系・日系企業での社内政治や評価に関わるご相談を扱うため、お預かりした個人情報およびご相談内容の秘密は厳守します。現職での身バレを気にせず、安心してご相談ください。</p>
       <p class="alt-contact">XのDMでも受け付けています： <a href="https://x.com/usagi_bucho" target="_blank" rel="noopener">@usagi_bucho</a></p>
     </div>
     <form class="cform reveal" id="cform" data-form="contact" novalidate>
