@@ -8,7 +8,7 @@
 <meta property="og:title" content="うさぎ部長｜外資の年収と評価の仕組み">
 <meta property="og:description" content="オファーを出す側から見た、年収と評価の仕組み。外資13年・昇進5回の一次証言をもとにしたキャリア戦略。">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#f7f4ee">
+<meta name="theme-color" content="#1f2a3a">
 <link rel="icon" type="image/webp" href="avatar.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,15 +82,25 @@
   .btn svg{width:16px;height:16px}
 
   /* hero */
-  .hero{padding:clamp(72px,11vw,140px) 0 clamp(56px,8vw,96px);position:relative;overflow:hidden}
-  .hero .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr);gap:clamp(32px,6vw,80px);align-items:center}
-  .hero h1{font-size:clamp(30px,4.6vw,52px);font-weight:600;line-height:1.4}
-  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero{padding:clamp(88px,12vw,160px) 0 clamp(64px,9vw,112px);position:relative;overflow:hidden;color:#f4f1ea;isolation:isolate}
+  .hero-bg{position:absolute;inset:0;z-index:-1;background:#1f2a3a}
+  .hero-bg .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:heroFade 18s infinite;transform:scale(1.04)}
+  .hero-bg .slide:nth-child(2){animation-delay:6s}
+  .hero-bg .slide:nth-child(3){animation-delay:12s}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,27,38,.92) 0%,rgba(20,27,38,.78) 45%,rgba(20,27,38,.5) 100%)}
+  @keyframes heroFade{0%{opacity:0}6%{opacity:1}33%{opacity:1}40%{opacity:0}100%{opacity:0}}
+  @media(prefers-reduced-motion:reduce){.hero-bg .slide{animation:none;transform:none}.hero-bg .slide:first-child{opacity:1}}
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr);gap:clamp(32px,6vw,80px);align-items:center;position:relative}
+  .hero .eyebrow{color:#e0957d}
+  .hero h1{font-size:clamp(30px,4.6vw,52px);font-weight:600;line-height:1.4;color:#fbf9f4;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+  .hero h1 em{font-style:normal;color:#e0957d}
   .hero h1 span{display:inline-block}
   h1,h2,h3,blockquote{font-feature-settings:normal;text-indent:0}
-  .hero .lead{margin-top:24px}
+  .hero .lead{margin-top:24px;color:rgba(244,241,234,.86)}
   .hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
-  .hero-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+  .hero .btn.ghost{border-color:#f4f1ea;color:#f4f1ea}
+  .hero .btn.ghost:hover{background:#f4f1ea;color:#1f2a3a}
+  .hero-card{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 24px 60px -20px rgba(0,0,0,.5)}
   .hero-card .who{display:flex;align-items:center;gap:14px;margin-bottom:18px}
   .avatar{width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:top;flex:none;border:2px solid var(--line)}
   .who strong{display:block;font-family:var(--serif);font-size:18px}
@@ -234,6 +244,11 @@
 <main id="top">
 
 <section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="slide" style="background-image:url('img/hero-singapore.jpg')"></div>
+    <div class="slide" style="background-image:url('img/hero-london.jpg')"></div>
+    <div class="slide" style="background-image:url('img/hero-slc.jpg')"></div>
+  </div>
   <div class="wrap">
     <div>
       <span class="eyebrow">Career strategy for mid-career professionals</span>
