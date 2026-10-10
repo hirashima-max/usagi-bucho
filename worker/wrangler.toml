@@ -1,0 +1,22 @@
+name = "usagi-form"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+# Comma-separated list of origins allowed to post to this Worker
+ALLOWED_ORIGINS = "https://hirashima-max.github.io"
+# Where submissions are delivered
+OWNER_EMAIL = "capocerebro@gmail.com"
+# Sender. "onboarding@resend.dev" works without a verified domain but can
+# only deliver to the Resend account owner's address. Switch to an address
+# on a verified domain (e.g. "うさぎ部長 <mail@your-domain.jp>") to also send
+# the welcome mail to subscribers.
+FROM_EMAIL = "onboarding@resend.dev"
+# Set to "true" once FROM_EMAIL is on a verified domain
+SEND_WELCOME = "false"
+# Absolute URL of the gift page
+GIFT_URL = "https://hirashima-max.github.io/usagi-bucho/gift/reading-list/"
+
+# Secrets (set with `wrangler secret put <NAME>`), never written here:
+#   RESEND_API_KEY     — from https://resend.com/api-keys
+#   TURNSTILE_SECRET   — from the Turnstile widget settings in the Cloudflare dashboard
