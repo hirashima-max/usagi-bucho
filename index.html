@@ -78,11 +78,24 @@
   .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
   .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:18px}
   .brand img{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:top}
-  .nav ul{display:flex;gap:26px;font-size:14px;font-weight:500}
+  .nav .wrap{gap:16px}
+  .brand,.nav ul a,.nav .cta{white-space:nowrap}
+  .brand{flex:none}
+  .nav ul{display:flex;gap:clamp(14px,2vw,26px);font-size:14px;font-weight:500;margin-left:auto}
   .nav ul a{color:var(--ink-2)}
   .nav ul a:hover{color:var(--ink)}
-  .nav .cta{font-size:14px}
-  @media(max-width:760px){.nav ul{display:none}}
+  .nav .cta{font-size:14px;flex:none}
+  .menu-btn{display:none;flex:none;width:42px;height:42px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);cursor:pointer;align-items:center;justify-content:center}
+  .menu-btn svg{width:20px;height:20px}
+  @media(max-width:1100px){
+    .nav ul{display:none;position:absolute;left:0;right:0;top:64px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:8px var(--gutter) 12px;box-shadow:var(--shadow)}
+    .nav ul li a{display:block;padding:12px 4px;border-bottom:1px solid var(--line);font-size:15px}
+    .nav ul li:last-child a{border-bottom:0}
+    .nav.open ul{display:flex}
+    .menu-btn{display:inline-flex;margin-left:auto}
+    .nav .cta{padding:10px 16px}
+  }
+  @media(max-width:420px){.nav .cta{display:none}}
 
   .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px;border:1.5px solid var(--ink);color:var(--ink);transition:transform .15s,background .15s,color .15s;line-height:1.3}
   .btn:hover{transform:translateY(-1px)}
@@ -101,10 +114,12 @@
   @keyframes heroFade{0%{opacity:0}6%{opacity:1}33%{opacity:1}40%{opacity:0}100%{opacity:0}}
   @media(prefers-reduced-motion:reduce){.hero-bg .slide{animation:none;transform:none}.hero-bg .slide:first-child{opacity:1}}
   .hero .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr);gap:clamp(32px,6vw,80px);align-items:center;position:relative}
+  @media(max-width:1100px){.hero .wrap{grid-template-columns:1fr;max-width:720px}}
   .hero .eyebrow{color:#e0957d}
-  .hero h1{font-size:clamp(30px,4.6vw,52px);font-weight:600;line-height:1.4;color:#fbf9f4;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+  .hero h1{font-size:clamp(28px,3.6vw,52px);font-weight:600;line-height:1.4;color:#fbf9f4;text-shadow:0 2px 24px rgba(0,0,0,.35);text-wrap:balance}
+  @media(max-width:1100px){.hero h1{font-size:clamp(28px,5.6vw,44px)}}
   .hero h1 em{font-style:normal;color:#e0957d}
-  .hero h1 span{display:inline-block}
+  .hero h1 span{display:inline-block;max-width:100%}
   h1,h2,h3,blockquote{font-feature-settings:normal;text-indent:0}
   .hero .lead{margin-top:24px;color:rgba(244,241,234,.86)}
   .hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
@@ -120,7 +135,6 @@
   .fact{background:var(--bg-2);border-radius:12px;padding:14px 16px}
   .fact b{display:block;font-family:var(--serif);font-size:24px;color:var(--ink);line-height:1.2}
   .fact small{font-size:12px;color:var(--muted)}
-  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
 
   /* quote band */
   .band{background:var(--ink);color:var(--bg);padding:clamp(48px,6vw,72px) 0}
@@ -265,7 +279,7 @@
       <img src="avatar.webp" alt="" width="32" height="32">
       うさぎ部長
     </a>
-    <ul>
+    <ul id="navlinks">
       <li><a href="#needs">本音</a></li>
       <li><a href="#about">プロフィール</a></li>
       <li><a href="#method">考え方</a></li>
@@ -275,6 +289,9 @@
       <li><a href="#gift">読書リスト</a></li>
       <li><a href="#contact">相談する</a></li>
     </ul>
+    <button class="menu-btn" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="navlinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
     <a class="btn primary cta" href="https://note.com/cerebro1977" target="_blank" rel="noopener">noteで読む</a>
   </div>
 </header>
@@ -660,6 +677,12 @@
 
 <script>
   document.documentElement.classList.add('js');
+  const nav=document.querySelector('.nav'),menuBtn=document.querySelector('.menu-btn');
+  if(menuBtn){
+    menuBtn.addEventListener('click',()=>{const o=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o)});
+    nav.querySelectorAll('ul a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));
+    document.addEventListener('click',e=>{if(!nav.contains(e.target)){nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}});
+  }
   document.getElementById('y').textContent=new Date().getFullYear();
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
