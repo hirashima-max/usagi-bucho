@@ -6,7 +6,7 @@ compatibility_date = "2026-10-01"
 # Comma-separated list of origins allowed to post to this Worker
 ALLOWED_ORIGINS = "https://hirashima-max.github.io"
 # Where submissions are delivered
-OWNER_EMAIL = "capocerebro@gmail.com"
+OWNER_EMAIL = "hirashima@gmail.com"  # temporary: Resend test sender only delivers to the account owner. Switch back to capocerebro@gmail.com after usagibucho.com is verified in Resend
 # Sender. "onboarding@resend.dev" works without a verified domain but can
 # only deliver to the Resend account owner's address. Switch to an address
 # on a verified domain (e.g. "うさぎ部長 <mail@your-domain.jp>") to also send
