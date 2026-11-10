@@ -1,1 +1,321 @@
-<li><a href="diagnosis.html">無料診断</a></li>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>残るか、動くか ミニ診断｜うさぎ部長</title>
+<meta name="description" content="残るか、動くか。評価会議であなたの名前がどう扱われるかを、採点する側の3つの条件（抜けられるか／推す人がいるか／枠と順番）で読む、無料のミニ診断です。全6問・約1分。回答はこのページの中だけで処理されます。">
+<meta property="og:title" content="残るか、動くか ミニ診断｜うさぎ部長">
+<meta property="og:description" content="評価会議であなたの名前がどう扱われるかを、採点する側の3つの条件で読む無料ミニ診断。全6問・約1分。">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://usagibucho.com/diagnosis.html">
+<meta property="og:url" content="https://usagibucho.com/diagnosis.html">
+<meta property="og:image" content="https://usagibucho.com/avatar.webp">
+<meta name="theme-color" content="#1f2a3a">
+<link rel="icon" type="image/webp" href="avatar.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+  :root{--bg:#f7f4ee;--bg-2:#efeae0;--surface:#fffdf9;--ink:#1f2a3a;--ink-2:#4a5567;--muted:#8a92a0;--line:#dcd5c8;--accent:#b5543c;--accent-ink:#fff;--accent-soft:#f3e2db;
+    --shadow:0 1px 2px rgba(31,42,58,.05),0 12px 32px -16px rgba(31,42,58,.18);--serif:"Shippori Mincho","Noto Serif JP","Hiragino Mincho ProN",serif;--sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;--radius:14px;--gutter:clamp(16px,4vw,40px)}
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15191f;--bg-2:#1b2027;--surface:#1e242c;--ink:#ecebe6;--ink-2:#b6bcc6;--muted:#7d8591;--line:#2d343e;--accent:#d9775e;--accent-ink:#15191f;--accent-soft:#3a2a25;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px -16px rgba(0,0,0,.6)}}
+  :root[data-theme="dark"]{--bg:#15191f;--bg-2:#1b2027;--surface:#1e242c;--ink:#ecebe6;--ink-2:#b6bcc6;--muted:#7d8591;--line:#2d343e;--accent:#d9775e;--accent-ink:#15191f;--accent-soft:#3a2a25;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px -16px rgba(0,0,0,.6)}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9;letter-spacing:.01em;font-feature-settings:"palt"}
+  .wrap{max-width:880px;margin:0 auto;padding:0 var(--gutter)}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.45;letter-spacing:.02em;font-feature-settings:normal}
+  p{color:var(--ink-2)}
+  .nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1080px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:18px}
+  .brand img{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:top}
+  .nav a.back{font-size:14px;color:var(--ink-2);white-space:nowrap}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;margin-bottom:14px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px;border:1.5px solid var(--ink);color:var(--ink);transition:transform .15s,background .15s,color .15s;line-height:1.3;cursor:pointer;background:transparent;font-family:var(--sans)}
+  .btn:hover{transform:translateY(-1px)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .btn.primary:hover{filter:brightness(1.05)}
+  .btn.ghost:hover{background:var(--ink);color:var(--bg)}
+  .btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+
+  header.hero{padding:clamp(56px,8vw,96px) 0 clamp(28px,4vw,44px)}
+  header.hero h1{font-size:clamp(26px,4vw,40px);text-wrap:balance}
+  header.hero .lead{margin-top:18px;max-width:40em;font-size:16.5px}
+  .note{margin-top:22px;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:16px 20px;font-size:14.5px;color:var(--ink-2)}
+  .note strong{color:var(--ink)}
+
+  section{padding:clamp(20px,3vw,36px) 0}
+  .q{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin-bottom:16px;box-shadow:var(--shadow)}
+  .q fieldset{border:0}
+  .q .qhead{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+  .q .qnum{font-family:var(--serif);font-size:13px;color:var(--accent);letter-spacing:.1em;flex:none}
+  .q .qtag{font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:2px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent);flex:none}
+  .q legend{font-family:var(--serif);font-size:18.5px;font-weight:600;line-height:1.55;color:var(--ink);float:left;width:100%;margin-bottom:14px}
+  .q .opts{display:grid;gap:10px;clear:both}
+  .q label{display:flex;gap:12px;align-items:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:13px 16px;cursor:pointer;font-size:15px;line-height:1.7;color:var(--ink-2);transition:border-color .15s,background .15s;background:var(--bg)}
+  .q label:hover{border-color:var(--muted)}
+  .q label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--ink)}
+  .q input[type="radio"]{flex:none;width:18px;height:18px;margin-top:5px;accent-color:var(--accent)}
+  .q.answered{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+
+  .actionbar{position:sticky;bottom:0;z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:14px 0}
+  .actionbar .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .actionbar .count{font-size:14px;color:var(--muted)}
+  .actionbar .btn{margin-left:auto}
+
+  #result{display:none}
+  #result.show{display:block}
+  .band-card{background:var(--surface);border:1.5px solid var(--accent);border-radius:20px;padding:clamp(24px,4vw,36px);box-shadow:var(--shadow)}
+  .band-card .eyebrow{margin-bottom:8px}
+  .band-card h2{font-size:clamp(23px,3.4vw,30px);margin-bottom:14px}
+  .band-card p+p{margin-top:12px}
+  .vars{margin-top:24px;display:grid;gap:12px}
+  .var{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .var .vname{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:15.5px;white-space:nowrap}
+  .var .vstate{font-size:12px;font-weight:700;letter-spacing:.06em;padding:3px 10px;border-radius:999px;justify-self:start;align-self:start}
+  .var .vstate.ok{background:var(--accent-soft);color:var(--accent)}
+  .var .vstate.mid{background:var(--bg-2);color:var(--ink-2)}
+  .var .vstate.low{background:var(--ink);color:var(--bg)}
+  .var p{grid-column:1/-1;font-size:14.5px}
+  .extra{margin-top:16px;background:var(--bg-2);border-radius:12px;padding:16px 20px;font-size:14.5px;color:var(--ink-2)}
+  .extra strong{color:var(--ink)}
+  .extra p+p{margin-top:10px}
+  .ctabox{margin-top:26px;border-top:1px solid var(--line);padding-top:24px}
+  .ctabox h3{font-size:19px;margin-bottom:8px}
+  .ctabox .price{font-family:var(--serif);font-size:20px;color:var(--ink);margin:10px 0 16px}
+  .ctabox .price small{font-family:var(--sans);font-size:13px;color:var(--muted);margin-left:6px}
+  .fineprint{margin-top:20px;font-size:13px;color:var(--muted)}
+  .resetrow{margin-top:22px;text-align:center}
+  .resetrow button{background:none;border:0;font:inherit;font-size:14px;color:var(--muted);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+  footer{padding:28px 0;font-size:13px;color:var(--muted)}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;max-width:1080px}
+  @media(max-width:560px){.q{padding:20px}.var{grid-template-columns:1fr}.var .vname{white-space:normal}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html"><img src="avatar.webp" alt="">うさぎ部長</a>
+  <a class="back" href="index.html">← サイトに戻る</a>
+</div></header>
+
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">Free mini check ・ 無料ミニ診断</span>
+  <h1>残るか、動くか。<br>会議でのあなたの扱われ方を読みます</h1>
+  <p class="lead">昇進も年収も、あなたがいない部屋で決まります。採点する側の席から見ると、その部屋で問われるのは実績の順番ではなく、3つの条件です。この診断では、その3条件に「引き留めの読み」と「外での年収レンジ」を加えて、あなたの現在地を大まかに読みます。</p>
+  <div class="note"><strong>全6問・約1分です。</strong>答えは直感で選んでください。回答はこのページの中だけで処理され、送信・保存はされません。なお、これは占いではなく、評価会議で実際に見られる条件に照らした大まかな読みです。断定はしません。</div>
+</div></header>
+
+<main>
+<section id="quiz"><div class="wrap">
+  <form id="diag" novalidate>
+
+    <div class="q" data-q="v1">
+      <fieldset>
+        <div class="qhead"><span class="qnum">Q1</span><span class="qtag">条件① 抜けられるか</span></div>
+        <legend>あなたの仕事は、あなたが抜けても回りますか？</legend>
+        <div class="opts">
+          <label><input type="radio" name="v1" value="2"><span>引き継げる形になっている。代理や手順があり、自分が休んでも現場は回る</span></label>
+          <label><input type="radio" name="v1" value="1"><span>一部は任せられるが、核の部分は自分にしか分からない</span></label>
+          <label><input type="radio" name="v1" value="0"><span>自分が止まれば現場も止まる。後任の名前も出てこない</span></label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="q" data-q="v2">
+      <fieldset>
+        <div class="qhead"><span class="qnum">Q2</span><span class="qtag">条件② 推す人がいるか</span></div>
+        <legend>上司は、評価会議であなたの「場面」を語れますか？</legend>
+        <div class="opts">
+          <label><input type="radio" name="v2" value="2"><span>直近の1on1で、数字ではなく「いつ・どこで・何をしたか」の場面を渡せている</span></label>
+          <label><input type="radio" name="v2" value="1"><span>実績の数字は共有している。場面までは渡せていない</span></label>
+          <label><input type="radio" name="v2" value="0"><span>上司が自分の仕事ぶりを具体的に知っているか、正直分からない</span></label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="q" data-q="v3">
+      <fieldset>
+        <div class="qhead"><span class="qnum">Q3</span><span class="qtag">条件③ 枠と順番</span></div>
+        <legend>「来期、候補に挙げるには何が揃えばいいか」を、上司に聞いたことはありますか？</legend>
+        <div class="opts">
+          <label><input type="radio" name="v3" value="2"><span>聞いた。条件が言葉になって返ってきた</span></label>
+          <label><input type="radio" name="v3" value="1"><span>昇進・昇給の希望は伝えた。条件までは聞いていない</span></label>
+          <label><input type="radio" name="v3" value="0"><span>まだ何も伝えていない</span></label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="q" data-q="co">
+      <fieldset>
+        <div class="qhead"><span class="qnum">Q4</span><span class="qtag">引き留めの読み</span></div>
+        <legend>今の会社で、あなたの年収が大きく動いたのはどんなときですか？</legend>
+        <div class="opts">
+          <label><input type="radio" name="co" value="0"><span>評価サイクルの中で、実績に応じて上がってきた</span></label>
+          <label><input type="radio" name="co" value="1"><span>ここ数年、ほぼ横ばいが続いている</span></label>
+          <label><input type="radio" name="co" value="2"><span>辞めたいと伝えた（ほのめかした）ときに、初めて大きく動いた</span></label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="q" data-q="mr">
+      <fieldset>
+        <div class="qhead"><span class="qnum">Q5</span><span class="qtag">外での年収レンジ</span></div>
+        <legend>同じ業種・同じロールの人が、外の会社でいくらで採用されているか、知っていますか？</legend>
+        <div class="opts">
+          <label><input type="radio" name="mr" value="0"><span>おおよそのレンジを、数字で言える</span></label>
+          <label><input type="radio" name="mr" value="1"><span>なんとなくの感覚はある。数字では言えない</span></label>
+          <label><input type="radio" name="mr" value="2"><span>見当がつかない。一度も測ったことがない</span></label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="q" data-q="rs">
+      <fieldset>
+        <div class="qhead"><span class="qnum">Q6</span><span class="qtag">辞める理由の質</span></div>
+        <legend>辞めたい・迷う理由を書き出すとしたら、お金が増えれば消える理由はどれくらいですか？</legend>
+        <div class="opts">
+          <label><input type="radio" name="rs" value="0"><span>ほぼ給与の問題。給与が是正されれば、残る理由になる</span></label>
+          <label><input type="radio" name="rs" value="1"><span>給与もあるが、上司・昇進の見通し・仕事の中身など、お金では消えない理由も混じっている</span></label>
+          <label><input type="radio" name="rs" value="2"><span>お金以外の理由が大半。金額が上がっても、問題は残る</span></label>
+        </div>
+      </fieldset>
+    </div>
+
+  </form>
+</div></section>
+
+<div class="actionbar"><div class="wrap">
+  <span class="count" id="count">0 / 6 問 回答済み</span>
+  <button class="btn primary" id="show" type="button" disabled>結果を見る</button>
+</div></div>
+
+<section id="result" aria-live="polite"><div class="wrap">
+  <div class="band-card">
+    <span class="eyebrow">Your reading ・ 読みの結果</span>
+    <h2 id="band-title"></h2>
+    <div id="band-body"></div>
+    <div class="vars" id="vars"></div>
+    <div class="extra" id="extra" hidden></div>
+    <div class="ctabox">
+      <h3>正確な読みは、個別査定で</h3>
+      <p id="cta-lead"></p>
+      <div class="price">¥5,000<small>／1回・文書でお渡し・匿名のままご利用いただけます</small></div>
+      <a class="btn primary" href="https://note.com/cerebro1977/n/nb95816a5ae26" target="_blank" rel="noopener">個別査定を申し込む（note）</a>
+      <p class="fineprint">個別査定「残るか、動くか。オファーのレンジを決める側が、あなたの1通を書きます」は、noteでお申し込みいただけます。</p>
+    </div>
+    <p class="fineprint">この診断は、あなたの回答をもとにした大まかな読みです。「必ず昇進する」「必ず上がる」といった断定はしません。正確な判定には、あなたの経歴と現職の条件を照合する必要があります。それが個別査定の役割です。</p>
+    <div class="resetrow"><button type="button" id="reset">もう一度診断する</button></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>© <span id="y"></span> うさぎ部長</span>
+  <span><a href="index.html">トップへ戻る</a></span>
+</div></footer>
+
+<script>
+  document.getElementById('y').textContent=new Date().getFullYear();
+  const form=document.getElementById('diag');
+  const countEl=document.getElementById('count');
+  const showBtn=document.getElementById('show');
+  const resultSec=document.getElementById('result');
+  const NAMES=['v1','v2','v3','co','mr','rs'];
+  function answers(){
+    const a={};
+    NAMES.forEach(n=>{const el=form.querySelector('input[name="'+n+'"]:checked');a[n]=el?parseInt(el.value,10):null});
+    return a;
+  }
+  function refresh(){
+    const a=answers();
+    const done=NAMES.filter(n=>a[n]!==null).length;
+    countEl.textContent=done+' / 6 問 回答済み';
+    showBtn.disabled=done<6;
+    document.querySelectorAll('.q').forEach(q=>{q.classList.toggle('answered',a[q.dataset.q]!==null)});
+  }
+  form.addEventListener('change',refresh);
+  refresh();
+
+  const VAR_READS={
+    v1:{name:'① 抜けられるか',reads:[
+      '仕事が型になっていて、あなたが抜けても回る状態です。会議で「現場に残す」と言われにくい側にいます。',
+      '一部はあなたに紐づいたままです。会議では「動かしたあとの穴を誰が埋めるか」が論点になりやすい状態です。',
+      '後任の名前が出てこない状態は、実績があっても「現場に残す」判定につながります。優秀さの問題ではなく、穴の問題です。']},
+    v2:{name:'② 推す人がいるか',reads:[
+      '上司の手元に、会議で語れる場面があります。本人不在の部屋で、あなたの名前を言える人がいる状態です。',
+      '数字は届いていても、場面は届いていないかもしれません。会議で上司が語るのは、数字ではなく場面です。',
+      '推す人がいないのではなく、推すための材料が渡っていない状態です。人間関係の良し悪しとは別の話です。']},
+    v3:{name:'③ 枠と順番',reads:[
+      '来期の条件が言葉になっています。順番待ちだとしても、揃えるべきものが具体化している状態です。',
+      '意向は伝わっていても、条件は言語化されていません。「何が足りないか」ではなく「何が揃えば推せるか」を聞く場面が、まだ残っています。',
+      '枠と順番の話が、まだ机に上がっていません。枠が限られる会議では、基準を満たすかどうかより先に「この枠には誰が入るか」の列に名前が載っているかが問われます。']}
+  };
+  const STATES=['欠けている','途中','揃っている'];
+  const STATE_CLS=['low','mid','ok'];
+
+  const BANDS={
+    stay:{title:'残る側の材料が、揃っています',
+      body:'<p>3つの条件の読みでは、あなたは「現場に残す」「推す人がいない」側にはいません。次の一手は、来期の条件を次の1on1で言葉にしてもらうことです。</p><p>ただし、残る判断の物差しは社内だけではありません。外であなたのレンジがどう読まれるかは、社内の条件とは別の帳簿で決まります。残るにせよ、その読みを持っているかどうかで交渉の形が変わります。</p>',
+      cta:'残る前提でも、外の物差しは一度測っておく価値があります。個別査定では、あなたの経歴と現職の条件をもとに、残る場合と動く場合の両方の年収レンジを、オファーのレンジを決める側の視点で文書にしてお渡しします。'},
+    move:{title:'動く側のシグナルが、強く出ています',
+      body:'<p>残る側の条件に欠けがあるうえに、年収の動き方にもサインが出ています。動くかどうかを決める前に要るのは、気合ではなく読みです。</p><p>あなたの年収レンジは、あなたがいない部屋で、業種とロールと担当地域から決まります。その読みを先に持っているかどうかで、エージェントとの会話も、現職への返事の仕方も変わります。</p>',
+      cta:'個別査定では、あなたの経歴と現職の条件をもとに、動く場合の年収レンジと、残る場合に最低限必要な条件を、オファーのレンジを決める側が文書で読みます。動くと決める前の、材料の照合です。'},
+    gap:{title:'決める材料が、まだ足りません',
+      body:'<p>残るとも動くとも、今の材料では決めないほうがいい状態です。能力の問題ではありません。</p><p>会議であなたの名前がどう扱われるかという社内の読みと、外でいくらのレンジに置かれるかという社外の読み。その2つが揃っていないだけです。先に揃えるべきは、欠けている条件のほうです。</p>',
+      cta:'足りない材料のうち、外のレンジの読みは第三者の照合が早道です。個別査定では、あなたの経歴と現職の条件をもとに、残る場合と動く場合の両方のレンジを文書でお渡しします。'}
+  };
+
+  function compute(a){
+    const stay=a.v1+a.v2+a.v3;          // 0..6 残る側の条件
+    const move=a.co+a.rs;                // 0..4 動く側のシグナル
+    let band;
+    if(stay>=5 && move<=2 && a.mr<=1) band='stay';
+    else if(move>=3 || (stay<=2 && move>=2)) band='move';
+    else band='gap';
+    return {stay,move,band};
+  }
+
+  showBtn.addEventListener('click',()=>{
+    const a=answers();
+    if(NAMES.some(n=>a[n]===null))return;
+    const r=compute(a);
+    const b=BANDS[r.band];
+    document.getElementById('band-title').textContent=b.title;
+    document.getElementById('band-body').innerHTML=b.body;
+    document.getElementById('cta-lead').textContent=b.cta;
+    const vars=document.getElementById('vars');
+    vars.innerHTML='';
+    ['v1','v2','v3'].forEach(k=>{
+      const v=a[k],info=VAR_READS[k];
+      const d=document.createElement('div');d.className='var';
+      d.innerHTML='<span class="vname"></span><span class="vstate '+STATE_CLS[v]+'"></span><p></p>';
+      d.querySelector('.vname').textContent=info.name;
+      d.querySelector('.vstate').textContent=STATES[v];
+      d.querySelector('p').textContent=info.reads[2-v];
+      vars.appendChild(d);
+    });
+    const extra=document.getElementById('extra');
+    const notes=[];
+    if(a.co===2)notes.push('<p><strong>引き留めについて。</strong>辞意を伝えたときにだけ大きく動いた金額は、会議では「評価」ではなく「時間を買う金」として読まれます。後任を探す数か月と、引き継ぎの手間への対価です。受けると、次の評価会議であなたの名前には「一度辞めかけた人」の一行が添えられます。受けるかどうかは、その一行ごと引き受けるかどうかで決めてください。</p>');
+    if(a.co===1)notes.push('<p><strong>年収の足踏みについて。</strong>数年の横ばいは、評価サイクルの中では誰かが多く配れば誰かが減る「分け合い」の結果でもあります。あなたの働きだけでは説明がつかない場合がある、ということです。</p>');
+    if(a.mr>=1)notes.push('<p><strong>外のレンジについて。</strong>あなたの年収レンジは、あなたがいない部屋で決まります。測ったことがないなら、残る判断の物差しが片方欠けたままになっています。</p>');
+    if(a.rs===2)notes.push('<p><strong>辞める理由について。</strong>お金で解ける問題と、お金で黙るだけの問題は別です。理由の大半が後者なら、金額が上がっても問題は残ります。</p>');
+    if(notes.length){extra.innerHTML=notes.join('');extra.hidden=false}else{extra.hidden=true;extra.innerHTML=''}
+    resultSec.classList.add('show');
+    resultSec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+
+  document.getElementById('reset').addEventListener('click',()=>{
+    form.reset();
+    resultSec.classList.remove('show');
+    refresh();
+    document.getElementById('quiz').scrollIntoView({behavior:'smooth'});
+  });
+</script>
+</body>
+</html>
